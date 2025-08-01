@@ -1,0 +1,168 @@
+/* style.css */
+
+/* Google Fonts - Inter is loaded in HTML, but good practice to note here too */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap'); */
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8fafc; /* Light background */
+    color: #334155; /* Dark text */
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #60a5fa;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
+
+/* Typing effect for Hero section */
+.typing-text::after {
+    content: '|';
+    animation: blink-caret 0.75s infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #60a5fa; }
+}
+
+/* Project card hover effect */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill card hover effect */
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Section reveal animation */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Simple modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    position: relative;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #60a5fa;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Contact Form Styling */
+form[action="https://submit-form.com/0PaBDdHZU"] {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(60, 120, 255, 0.08);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form[action="https://submit-form.com/0PaBDdHZU"] label {
+  font-weight: 600;
+  color: #2563eb;
+  text-align: left;
+  margin-bottom: 0.3rem;
+}
+
+form[action="https://submit-form.com/0PaBDdHZU"] input,
+form[action="https://submit-form.com/0PaBDdHZU"] textarea {
+  padding: 0.8rem 1rem;
+  border: 2px solid #dbeafe;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  background: #f1f5f9;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+form[action="https://submit-form.com/0PaBDdHZU"] input:focus,
+form[action="https://submit-form.com/0PaBDdHZU"] textarea:focus {
+  border-color: #2563eb;
+  background: #fff;
+}
+
+form[action="https://submit-form.com/0PaBDdHZU"] button[type="submit"] {
+  background: linear-gradient(90deg, #2563eb 60%, #9333ea 100%);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(60, 120, 255, 0.12);
+  transition: background 0.2s, transform 0.2s;
+}
+
+form[action="https://submit-form.com/0PaBDdHZU"] button[type="submit"]:hover {
+  background: linear-gradient(90deg, #9333ea 60%, #2563eb 100%);
+  transform: scale(1.04);
+}
